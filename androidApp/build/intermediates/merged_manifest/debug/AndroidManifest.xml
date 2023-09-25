@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.myapplication.MyApplication"
+    package="com.skanderjabouzi.KMPTest"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -12,10 +12,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <permission
-        android:name="com.myapplication.MyApplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.skanderjabouzi.KMPTest.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.myapplication.MyApplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.skanderjabouzi.KMPTest.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -29,7 +29,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <activity
-            android:name="com.myapplication.MainActivity"
+            android:name="com.skanderjabouzi.MainActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|mnc|colorMode|density|fontScale|fontWeightAdjustment|keyboard|layoutDirection|locale|mcc|navigation|smallestScreenSize|touchscreen|uiMode"
             android:exported="true" >
             <intent-filter>
@@ -41,7 +41,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.myapplication.MyApplication.androidx-startup"
+            android:authorities="com.skanderjabouzi.KMPTest.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="io.realm.kotlin.internal.RealmInitializer"

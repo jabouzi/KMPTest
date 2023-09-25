@@ -97,11 +97,9 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/compose-multiplatform.xml"
   install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/font"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/compose-multiplatform.xml"
   install_resource "${PODS_ROOT}/../../shared/src/commonMain/resources/font"
 fi
 
