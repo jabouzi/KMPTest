@@ -21,7 +21,9 @@ import io.realm.kotlin.notifications.SingleQueryChange
 import io.realm.kotlin.ext.query
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import model.entity.Counter
@@ -74,5 +76,13 @@ class CounterRepository {
             .map { it: SingleQueryChange<Counter> ->
                 it.obj?.operations!!.fold(0L,) { sum, el -> sum + el }
             }
+    }
+
+    fun observeTest(start: Boolean): Flow<Int> {
+        return flow {
+            for (i in 0 .. 10) {
+                delay(1000)
+            }
+        }
     }
 }
